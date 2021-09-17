@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">LxyMyApp01</string>
+
+    <string name="question_australia">Australia 澳大利亚世界上唯一国土覆盖一整个大陆的国家</string>
+    <string name="question_oceans">Oceans 指五大洋之一的洋</string>
+    <string name="question_mideast">Mideast 中东 “两洋三洲五海”之地</string>
+    <string name="question_africa">Africa 非洲是最黑的洲</string>
+    <string name="question_america">America 美国在美洲</string>
+    <string name="question_asia">Asia 是最小的洲 </string>
+
+    <!---->
+
+    <string name="true_button">True</string>
+    <string name="false_button">False</string>
+    <string name="correct_toast">Correct</string>
+
+    <string name="incorrect_toast">Incorrect!</string>
+
+    <string name="next_button">Next</string>
+    <string name="prev_button">Prev</string>
+
+
+
+</resources>
