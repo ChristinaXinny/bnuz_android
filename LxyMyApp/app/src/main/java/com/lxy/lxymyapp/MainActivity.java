@@ -1,8 +1,11 @@
 package com.lxy.lxymyapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -10,6 +13,21 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    //TAG常量 关于打印日志
+    private static final String TAG = "QuizActivity";
+    //新增键-值对的键
+    private static final String KEY_INDEX = "index";
+
+    private static final String KEY_ANSWERED = "KEY_ANSWERED";
+
+    private static  final String KEY_COUNT = "count";
+    private static  final String KEY_NUM = "num";
+
+    //分数
+    private int count = 0;
+    //已经答题的数目
+    private int num = 0;
 
 
     private Button mTrueButton;
@@ -43,15 +61,35 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //为onCreate(Bundle)方法添加日志输出代码
+        Log.d(TAG, "onCreate(Bundle) called");
+
+        if (savedInstanceState != null) {
+            boolean answerIsAnswered[] = savedInstanceState.getBooleanArray(KEY_ANSWERED);
+
+            //当界面被create的时候 将存储起来的KEY_COUNT获取到 并赋值给count
+            for (int i = 0; i < mQuestionsBank.length; i++) {
+                mQuestionsBank[i].setAnswered(answerIsAnswered[i]);
+            }
+        }
+
+        //在onCreate(Bundle)方法中检查存储的bundle信息
+        if (savedInstanceState != null){
+            count = savedInstanceState.getInt(KEY_COUNT,0);
+            num = savedInstanceState.getInt(KEY_NUM,0);
+            mCurrentIndex = savedInstanceState.getInt(KEY_INDEX, 0);
+        }
+
 
 
 //       对 mQuestionTextView 进行设置
 //       这里设置问题对显示 根据mQuestionsBank的数组动态变换里面的文字
         mQuestionTextView = findViewById(R.id.question_text_view);
         mQuestionTextView.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                mCurrentIndex = (mCurrentIndex + 1) %mQuestionsBank.length;
+                mCurrentIndex = (mCurrentIndex + 1) % mQuestionsBank.length;
                 updateQuestion();
             }
         });
@@ -84,7 +122,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mCurrentIndex = (mCurrentIndex + 1) % mQuestionsBank.length;
+                checkIfAnswered();
                 updateQuestion();
+
             }
             //
         });
@@ -92,7 +132,6 @@ public class MainActivity extends AppCompatActivity {
 
 //        向前的按钮
         mPreButton = findViewById(R.id.prev_button);
-
         mPreButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
                     mCurrentIndex = mQuestionsBank.length;
                 }
                 mCurrentIndex = (mCurrentIndex - 1) % mQuestionsBank.length;
+                checkIfAnswered();
                 updateQuestion();
             }
         });
@@ -126,12 +166,81 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
         updateQuestion();
     }
+
+
+    //覆盖更多生命周期方法
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG,"onStart() called");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG,"onStop() called");
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG,"onDestroy() called");
+
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG,"onPause() called");
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG,"onResume() called");
+    }
+
+
+    //覆盖onSaveInstanceState(Bundle)方法
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        //存储是否作答状态
+        boolean answerIsAnswered[] = new boolean[mQuestionsBank.length];
+        for (int i = 0; i < mQuestionsBank.length; i++) {
+            answerIsAnswered[i] = mQuestionsBank[i].isAnswered();
+        }
+        //存储KEY_ANSWERED
+        outState.putBooleanArray(KEY_ANSWERED, answerIsAnswered);
+
+        // 将count 存储到KEY_COUNT中
+        outState.putInt(KEY_COUNT, count);
+        outState.putInt(KEY_NUM, num);
+
+        Log.i(TAG, "onSaveInstanceState");
+        outState.putInt(KEY_INDEX, mCurrentIndex);
+    }
+
+
+
+
+    // 判断是否作答。
+    private void checkIfAnswered() {
+        boolean answerIsAnswered = mQuestionsBank[mCurrentIndex].isAnswered();
+        if (answerIsAnswered == true) {
+            mTrueButton.setEnabled(false);
+            mFalseButton.setEnabled(false);
+        } else {
+            mTrueButton.setEnabled(true);
+            mFalseButton.setEnabled(true);
+        }
+    }
+
+
 
 
     //     更新问题的文字
@@ -143,18 +252,24 @@ public class MainActivity extends AppCompatActivity {
     //    将按钮的弹框提出 进行和答案的对错和用户选择的对错进行判断
     private void checkAnswer(boolean userPressedTrue){
         boolean answerIsTrue = mQuestionsBank[mCurrentIndex].isAnswerTrue();
+        mQuestionsBank[mCurrentIndex].setAnswered(true);
+        checkIfAnswered();
 
         int massId = 0;
         if (userPressedTrue == answerIsTrue){
             massId = R.string.correct_toast;
+            count ++;
         }
         else{
             massId = R.string.incorrect_toast;
         }
+        num++;
+        System.out.println(num);
         Toast.makeText(this, massId, Toast.LENGTH_SHORT).show();
+        if (num == 6){
+            Toast.makeText(this, "you count is "+(count*16.6), Toast.LENGTH_SHORT).show();
 
-
-
+        }
     }
 
 }
