@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">刘心怡的浏览器</string>
+
+    <string name="phone">电话:</string>
+    <string name="phone_number">请输入电话</string>
+    <string name="message">短信:</string>
+    <string name="message_content">请输入短信内容</string>
+
+</resources>

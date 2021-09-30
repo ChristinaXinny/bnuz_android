@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    >
+
+    <ImageView
+        android:id="@+id/img_head"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:src="@drawable/tu2"
+        android:background="@color/pink_100"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <Button
+        android:id="@+id/img_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="返回我的学号和姓名"
+/>
+
+</LinearLayout>
