@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="bnt_1">
+        <!--<item name=""-->
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_width">64dp</item>
+        <item name="android:layout_margin">3dp</item>
+
+    </style>
+    <!--number-->
+    <style name="bnt_2">
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_width">64dp</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textSize">25dp</item>
+    </style>
+    <style name="bnt_3">
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_width">64dp</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+</resources>

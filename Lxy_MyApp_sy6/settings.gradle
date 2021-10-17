@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "Lxy_MyApp_sy6"

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:padding="30dp">
+
+
+    <EditText
+        android:id="@+id/text_question"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@null"
+        android:textSize="15pt"
+        android:layout_marginTop="10dp"
+        android:gravity="end"
+        />
+
+    <EditText
+        android:id="@+id/text_result"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:textSize="43dp"
+        android:gravity="end"
+        />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill"
+        android:columnCount="5"
+        android:orientation="horizontal"
+        android:rowCount="6">
+
+        <Button
+            android:id="@+id/m_clear"
+            style="@style/bnt_3"
+            android:text="@string/mc" />
+
+        <Button
+            android:id="@+id/m_read"
+            style="@style/bnt_3"
+            android:text="@string/mr" />
+
+        <Button
+            android:id="@+id/m_save"
+            style="@style/bnt_3"
+            android:text="@string/ms" />
+
+        <Button
+            android:id="@+id/m_plus"
+            style="@style/bnt_3"
+            android:text="@string/m_plus" />
+
+        <Button
+            android:id="@+id/m_subtract"
+            style="@style/bnt_3"
+            android:text="@string/m_subtract" />
+
+
+        <Button
+            android:id="@+id/m_de"
+            style="@style/bnt_1"
+            android:text="DE" />
+
+        <Button
+            android:id="@+id/m_ce"
+            style="@style/bnt_1"
+            android:text="@string/ce" />
+
+        <Button
+            android:id="@+id/m_c"
+            style="@style/bnt_1"
+            android:text="@string/c" />
+
+        <Button
+            android:id="@+id/bnt_a"
+            style="@style/bnt_1"
+            android:text="(" />
+
+        <Button
+            android:id="@+id/bnt_b"
+            style="@style/bnt_1"
+            android:text=")" />
+
+
+        <Button
+            android:id="@+id/num_7"
+            style="@style/bnt_2"
+            android:text="7"
+
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/num_8"
+            style="@style/bnt_2"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/num_9"
+            style="@style/bnt_2"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/opt_divide"
+            style="@style/bnt_2"
+            android:text="/" />
+
+
+        <Button
+            android:id="@+id/opt_remainder"
+            style="@style/bnt_2"
+            android:text="%" />
+
+
+        <Button
+            android:id="@+id/num_4"
+            style="@style/bnt_2"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/num_5"
+            style="@style/bnt_2"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/num_6"
+            style="@style/bnt_2"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/opt_multiply"
+            style="@style/bnt_2"
+            android:text="*" />
+
+
+        <Button
+            android:id="@+id/opt_fraction"
+            style="@style/bnt_2"
+            android:textSize="20dp"
+            android:text="/x" />
+
+        <Button
+            android:id="@+id/num_1"
+            style="@style/bnt_2"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/num_2"
+            style="@style/bnt_2"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/num_3"
+            style="@style/bnt_2"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/opt_subtract"
+            style="@style/bnt_2"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/opt_equal"
+            android:layout_width="64dp"
+            android:layout_height="126dp"
+            android:layout_rowSpan="2"
+            android:textSize="25dp"
+            android:layout_margin="3dp"
+            android:text="=" />
+
+        <Button
+            android:id="@+id/num_0"
+            android:layout_height="60dp"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal"
+            android:layout_margin="3dp"
+            android:text="0"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/symbol_point"
+            style="@style/bnt_2"
+            android:text="." />
+
+        <Button
+            android:id="@+id/opr_plus"
+            style="@style/bnt_2"
+            android:text="+" />
+
+
+    </GridLayout>
+
+
+</LinearLayout>

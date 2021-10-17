@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">刘心怡计算器</string>
+    <string name="m_subtract">M-</string>
+    <string name="m_plus">M+</string>
+    <string name="ms">MS</string>
+    <string name="mr">MR</string>
+    <string name="mc">MC</string>
+    <string name="delete">back</string>
+    <string name="ce">CE</string>
+    <string name="c">C</string>
+
+</resources>

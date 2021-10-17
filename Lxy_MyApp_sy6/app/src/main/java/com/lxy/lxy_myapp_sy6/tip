@@ -1,0 +1,26 @@
+推荐测试数据
+
+v  8%02
+x  3.3.3
+x  6+3(1-2)(2-3)
+v  8/6*(3-3)
+v  (6*3)
+x  4-(3-(5-2)
+
+
+
+
+
+mClear;      // mc清除  存到strList中mIndex数字
+mRead;       // mr读取  存到strList中mIndex数字
+mSave;       // ms存储  存到strList中
+mPlus;       // m+     strList中下一个数
+mSubtract;   // m-     strList中上一个数
+
+
+
+// de 删除一个符号【数字+符号】
+// ce 清除本次操作 不包括历史记录
+// c  清除全部
+
+
