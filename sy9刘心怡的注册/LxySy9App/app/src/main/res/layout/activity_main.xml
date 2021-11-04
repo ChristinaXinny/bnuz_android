@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2222"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/welcome"
+        android:textStyle="bold"
+        android:textColor="#1D46C5"
+        android:textSize="40sp" />
+
+    <TableLayout
+        android:id="@+id/table_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+
+        android:stretchColumns="1">
+
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/name_text"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ma_yonghu"
+                android:gravity="left"
+                android:text="@string/user"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/name_edit"
+                android:hint="@string/tip1"
+                android:singleLine="true" />
+
+            <ImageView
+                android:id="@+id/name_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="invisible" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/pass_text"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ma_mima1"
+                android:gravity="left"
+
+                android:text="@string/password"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/pass_edit"
+                android:hint="@string/input_mima"
+                android:inputType="textPassword" />
+
+            <ImageView
+                android:id="@+id/pass_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="invisible" />
+
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/define_text"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ma_mima2"
+                android:gravity="right"
+
+                android:text="@string/definepw"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/define_edit"
+                android:hint="@string/again_mima"
+                android:inputType="textPassword" />
+
+            <ImageView
+                android:id="@+id/define_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="invisible" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/gender_text"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/ma_xingbie"
+                android:gravity="left"
+                android:text="@string/gender"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/gender_rg"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/boy"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rb_1"
+                    android:text="@string/girl"
+                    android:textSize="16sp" />
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/school_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="right"
+                android:text="@string/school"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:entries="@array/school" />
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/place_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/place" />
+
+        <EditText
+            android:id="@+id/place_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#111"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/data_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/data" />
+
+        <EditText
+            android:id="@+id/data_text"
+            android:layout_width="match_parent"
+            android:textColor="#111"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#ED4E49"
+        android:text="@string/login" />
+
+</LinearLayout>

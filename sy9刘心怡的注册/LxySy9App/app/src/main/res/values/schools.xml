@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="school">
+        <item>请选择学校</item>
+        <item>北京师范大学珠海校区</item>
+        <item>北京师范大学珠海分校</item>
+        <item>北京理工大学珠海学院</item>
+        <item>吉林大学珠海学院</item>
+    </string-array>
+    
+    
+</resources>

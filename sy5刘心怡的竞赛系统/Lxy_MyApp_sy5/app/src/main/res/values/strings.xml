@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">lxy的竞赛登录</string>
+    <string name="title">欢迎参加手机软件射击赛</string>
+    <string name="login">登录</string>
+    <string name="join">注册</string>
+    <string name="detail">如有疑问请联系我们\n联系电话: 1234513134\nE-mail: lxy@163.com\n网址: http://www.bnuz.ed.cn</string>
+
+</resources>
