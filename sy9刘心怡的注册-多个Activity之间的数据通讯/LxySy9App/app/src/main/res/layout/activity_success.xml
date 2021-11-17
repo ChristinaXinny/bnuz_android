@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/su_bg22"
+    android:padding="20dp"
+    >
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="注册成功"
+        android:textSize="40dp"
+        android:textColor="#C61B0E"
+        android:textStyle="bold"
+        />
+
+
+
+    <TableLayout
+        android:id="@+id/table_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="3dip"
+        android:paddingTop="10dp"
+        android:stretchColumns="1">
+
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/name_text"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/su_yonghu"
+                android:gravity="left"
+
+                android:padding="5dp"
+                android:text="@string/user"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/name_to"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:text="ddd" />
+
+
+        </TableRow>
+
+
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/pass_text"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/su_mima"
+                android:gravity="left"
+                android:padding="5dp"
+                android:text="密码："
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/pass_to"
+                android:textSize="20sp"
+                android:padding="5dp"
+
+                android:text="ddd"
+                />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/gender_text"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/su_xingbie"
+                android:gravity="left"
+                android:padding="5dp"
+                android:text="性别："
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/gender_to"
+                android:textSize="20sp"
+                android:padding="5dp"
+
+                android:text="ddd"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/school_text"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/su_xuexiao"
+                android:gravity="left"
+                android:padding="5dp"
+                android:text="学校："
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/school_to"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:text="ddd" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/place_text"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/su_diqu"
+                android:gravity="left"
+                android:padding="5dp"
+                android:text="地区："
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/place_to"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:text="ddd" />
+        </TableRow>
+
+    </TableLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
