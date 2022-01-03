@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:layout_marginBottom="40dp"
+    android:background="#8000">
+        <TextView
+            android:textColor="@color/text_black"
+            android:layout_marginTop="20dp"
+            android:text="生活指数"
+            android:textSize="28dp"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dip"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#A9FFFFFF" />
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+
+                android:layout_height="70dp">
+                <ImageView
+                    android:background="@drawable/comf"
+                    style="@style/index_img" />
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/comf_type"
+                            style="@style/compentType" />
+                        <TextView
+                            android:text="【舒适度指数】"
+                            style="@style/compentAnnotation" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/comf_txt"
+                        style="@style/compentSmall" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <ImageView
+                    android:background="@drawable/drsg"
+                    style="@style/index_img" />
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/drsg_type"
+                            style="@style/compentType" />
+                        <TextView
+                            android:text="【穿衣指数】"
+                            style="@style/compentAnnotation" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/drsg_txt"
+                        style="@style/compentSmall" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <ImageView
+                    android:background="@drawable/flu"
+                    style="@style/index_img" />
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/flu_type"
+                            style="@style/compentType" />
+                        <TextView
+                            android:text="【感冒指数】"
+                            style="@style/compentAnnotation" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/flu_txt"
+                        style="@style/compentSmall" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <ImageView
+                    android:background="@drawable/sport"
+                    style="@style/index_img" />
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/sport_type"
+                            style="@style/compentType" />
+                        <TextView
+                            android:text="【运动指数】"
+                            style="@style/compentAnnotation" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/sport_txt"
+                        style="@style/compentSmall" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <ImageView
+                    android:background="@drawable/trav"
+                    style="@style/index_img" />
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/trav_type"
+                            style="@style/compentType" />
+                        <TextView
+                            android:text="【旅游指数】"
+                            style="@style/compentAnnotation" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/trav_txt"
+                        style="@style/compentSmall" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <ImageView
+                    android:background="@drawable/uv"
+                    style="@style/index_img" />
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/uv_type"
+                            style="@style/compentType" />
+                        <TextView
+                            android:text="【紫外线指数】"
+                            style="@style/compentAnnotation"/>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/uv_txt"
+                        style="@style/compentSmall" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <ImageView
+                    android:background="@drawable/cw"
+                    style="@style/index_img" />
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/cw_type"
+                            style="@style/compentType"/>
+                        <TextView
+                            android:text="【洗车指数】"
+                            style="@style/compentAnnotation" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/cw_txt"
+                        style="@style/compentSmall" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <ImageView
+                    android:background="@drawable/air"
+                    style="@style/index_img" />
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/air_type"
+                            style="@style/compentType" />
+                        <TextView
+                            android:text="【空气污染扩散条件指数】"
+                            style="@style/compentAnnotation"/>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/air_txt"
+                        style="@style/compentSmall" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+</LinearLayout>

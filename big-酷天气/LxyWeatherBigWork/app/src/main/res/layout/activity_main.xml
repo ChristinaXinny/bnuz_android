@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.lxy.androidBigWork.weather.MainActivity"
+    android:id="@+id/main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <Button
+            android:id="@+id/btn_image_main"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/ic_home" />
+
+        <Button
+            android:id="@+id/btn_color_main"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/main_bg_exchange" />
+
+
+        <Button
+            android:id="@+id/sw"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/switch_true" />
+
+
+
+        <include layout="@layout/title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+
+        <RadioGroup
+            android:id="@+id/rg_tab_bar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bg_white"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb0"
+                style="@style/tab_menu_item"
+                android:text="多天预报" />
+
+            <RadioButton
+                android:id="@+id/rb1"
+                style="@style/tab_menu_item"
+                android:text="今日详情" />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                style="@style/tab_menu_item"
+                android:text="设定位置" />
+
+        </RadioGroup>
+
+        <View
+            android:id="@+id/div_tab_bar"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_above="@id/rg_tab_bar"
+            android:background="@color/lineBlue" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/div_tab_bar" />
+    </RelativeLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>
